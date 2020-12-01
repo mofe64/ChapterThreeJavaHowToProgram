@@ -104,5 +104,18 @@ public class HealthProfile {
         return Year.now().getValue() - dateOfBirth.getYear();
     }
 
-    //public
+    public int getMaximumHeartRate(){
+        return 220 - getAge();
+    }
+
+    public void getTargetHeartRange(){
+        System.out.println("Target Heart Range is between " + ((50 * getMaximumHeartRate()) / 100) + "and " +
+                ((85 * getMaximumHeartRate()) / 100)
+        );
+    }
+    public void calculateBMI(){
+        int BMI = weightInPounds * 703 / (heightInInches * heightInInches);
+        System.out.println("Bmi is " + BMI);
+    }
+
 }

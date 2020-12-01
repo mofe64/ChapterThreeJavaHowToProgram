@@ -7,9 +7,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TargetHeartRateCalculatorTest {
-
+    TargetHeartRateCalculator targetHeartRateCalculator;
     @BeforeEach
     void setUp() {
+        targetHeartRateCalculator = new TargetHeartRateCalculator("Eyimofe", "Ogunbiyi", 27,1,1998);
     }
 
     @AfterEach
@@ -18,26 +19,32 @@ class TargetHeartRateCalculatorTest {
 
     @Test
     void getFirstName() {
+        assertEquals("Eyimofe", targetHeartRateCalculator.getFirstName());
     }
 
     @Test
     void getLastName() {
+        assertEquals("Ogunbiyi", targetHeartRateCalculator.getLastName());
     }
 
     @Test
     void getDayOfBirth() {
+        assertEquals(27, targetHeartRateCalculator.getDayOfBirth());
     }
 
     @Test
     void getMonthOfBirth() {
+        assertEquals(1, targetHeartRateCalculator.getMonthOfBirth());
     }
 
     @Test
     void getYearOfBirth() {
+        assertEquals(1998,targetHeartRateCalculator.getYearOfBirth());
     }
 
     @Test
     void getDateOfBirth() {
+
     }
 
     @Test

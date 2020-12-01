@@ -27,7 +27,7 @@ public class ModifiedAccountClass {
     public String getName() {
         return name;
     }
-    public void withdraw(int withdrawAmount){
+    public void withdraw(double withdrawAmount){
         if(withdrawAmount < balance) {
             balance -= withdrawAmount;
         }
