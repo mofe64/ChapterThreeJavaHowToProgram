@@ -42,44 +42,57 @@ class TargetHeartRateCalculatorTest {
         assertEquals(1998,targetHeartRateCalculator.getYearOfBirth());
     }
 
-    @Test
-    void getDateOfBirth() {
-
-    }
 
     @Test
     void setFirstName() {
+        targetHeartRateCalculator.setFirstName("test");
+        assertEquals("test", targetHeartRateCalculator.getFirstName());
     }
 
     @Test
     void setLastName() {
+        targetHeartRateCalculator.setLastName("test");
+        assertEquals("test", targetHeartRateCalculator.getLastName());
     }
 
     @Test
     void setDayOfBirth() {
+        targetHeartRateCalculator.setDayOfBirth(5);
+        assertEquals(5, targetHeartRateCalculator.getDayOfBirth());
     }
 
     @Test
     void setMonthOfBirth() {
+        targetHeartRateCalculator.setMonthOfBirth(7);
+        assertEquals(7, targetHeartRateCalculator.getMonthOfBirth());
     }
 
     @Test
     void setYearOfBirth() {
+        targetHeartRateCalculator.setYearOfBirth(2003);
+        assertEquals(2003,targetHeartRateCalculator.getYearOfBirth());
     }
 
     @Test
     void setDateOfBirth() {
+        Date date = new Date(1,1,2000);
+        targetHeartRateCalculator.setDateOfBirth(date);
+        assertEquals(date,targetHeartRateCalculator.getDateOfBirth());
     }
 
     @Test
     void getAge() {
+        assertEquals(22,targetHeartRateCalculator.getAge());
     }
 
     @Test
     void getMaxHeartRate() {
+        int maxHeartRate  = 220 - targetHeartRateCalculator.getAge();
+        assertEquals(maxHeartRate, targetHeartRateCalculator.getMaxHeartRate());
     }
 
     @Test
     void getTargetHeartRange() {
+        targetHeartRateCalculator.getTargetHeartRange();
     }
 }
